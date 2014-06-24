@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title><%= title%></title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/local.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/local.js"></script>
+</head>
+<body>
+<!-- header -->
+<%- include header%>
+<!-- /header -->
+<!-- main content -->
+<div class="container" style="padding-top:60px;width: 450px">
+    <form method="post">
+        <div class="input-group">
+            <p class="login-label text-primary">&nbsp;&nbsp;用户名:</p>
+            <input name="reg_user_name" type="text" class="form-control" placeholder="账号">
+        </div>
+        </br>
+        <div class="input-group">
+            <p class="login-label text-primary">&nbsp;&nbsp;&nbsp;&nbsp;密码:</p>
+            <input name="reg_password" type="password" class="form-control" placeholder="密码">
+        </div>
+        </br>
+        <div class="input-group">
+            <p class="login-label text-primary">重复密码:</p>
+            <input name="reg_repeat_password" type="password" class="form-control" placeholder="重复密码">
+        </div>
+        </br>
+        <div class="input-group">
+            <p class="login-label text-primary">&nbsp;&nbsp;&nbsp;&nbsp;邮箱:</p>
+            <input name="reg_email" type="text" class="form-control" placeholder="邮箱">
+        </div>
+        </br>
+        <div class="text-right">
+            <p class="text-success text-center login-info" style="height: 40px"><%= info%></p>
+            <button type="submit" class="btn btn-primary">注册</button>
+        </div>
+    </form>
+</div>
+<!-- main content-->
+<!-- footer -->
+<%- include footer%>
+<!-- /footer -->
+</body>
+</html>

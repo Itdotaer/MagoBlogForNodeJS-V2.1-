@@ -1,0 +1,5 @@
+<div class="container" style="padding-top:60px">
+    <%posts.forEach(function (post, index) {%>
+    <p class="text-left text-warning r_head"><%=post.title %>|<%=post.time.day %>|<%=post.name%>|<%=post.pv%><img src="<%= post.head %>"></p>
+    <%})%>
+</div>

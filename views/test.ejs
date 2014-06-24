@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>demo</title>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+  </head>
+<body>
+	<h2>demo</h2>
+	<div class="container">
+		<p class="text-left">Left aligned text.</p>
+		<p class="text-center">Center aligned text.</p>
+		<p class="text-right">Right aligned text.</p>
+		<p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+		<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+		<p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+		<p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+		<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+		<abbr title="attribute">attr</abbr>
+		<address>
+		  <strong>Twitter, Inc.</strong><br>
+		  795 Folsom Ave, Suite 600<br>
+		  San Francisco, CA 94107<br>
+		  <abbr title="Phone">P:</abbr> (123) 456-7890
+		</address>
+		 
+		<address>
+		  <strong>Full Name</strong><br>
+		  <a href="mailto:#">first.last@example.com</a>
+		</address>
+		
+		<blockquote>
+		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+		</blockquote>
+		
+		<blockquote>
+		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+		  <small>Someone famous <cite title="Source Title">Source Title</cite></small>
+		</blockquote>
+		
+		<table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+    	</table>
+    	
+    	<form>
+		  <fieldset>
+		    <legend>Legend</legend>
+		    <label>Label name</label>
+		    <input type="text" placeholder="Type somethin...">
+		    <span class="help-block">Example block-level help text here.</span>
+		    <label class="checkbox">
+		      <input type="checkbox"> Check me out
+		    </label>
+		    <button type="submit" class="btn">Submit</button>
+		  </fieldset>
+		</form>
+		
+		<form class="form-search">
+		  <input type="text" class="input-medium search-query">
+		  <button type="submit" class="btn">Search</button>
+		</form>
+		
+		<form class="form-horizontal">
+		  <div class="control-group">
+		    <label class="control-label" for="inputEmail">Email</label>
+		    <div class="controls">
+		      <input type="text" id="inputEmail" placeholder="Email">
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <label class="control-label" for="inputPassword">Password</label>
+		    <div class="controls">
+		      <input type="password" id="inputPassword" placeholder="Password">
+		    </div>
+		  </div>
+		  <div class="control-group">
+		    <div class="controls">
+		      <label class="checkbox">
+		        <input type="checkbox"> Remember me
+		      </label>
+		      <button type="submit" class="btn">Sign in</button>
+		    </div>
+		  </div>
+		</form>
+		
+		<p>
+			<button class="btn btn-primary" type="button">Button</button>
+		</p>
+		<p>
+			<button class="btn btn-info" type="button">Button</button>
+		</p>
+		<p>
+			<button class="btn btn-success" type="button">Button</button>
+		</p>
+		<p>
+			<button class="btn btn-warning" type="button">Button</button>
+		</p>
+		
+		<div class="btn-toolbar" role="toolbar">
+	      <div class="btn-group">
+	        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-left"></span></button>
+	        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-center"></span></button>
+	        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-right"></span></button>
+	        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-justify"></span></button>
+	      </div>
+	    </div>
+		
+		<!-- Button trigger modal -->
+		<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+		  Launch demo modal
+		</button>
+		
+		<!-- Modal -->
+		<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+		        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+		      </div>
+		      <div class="modal-body">
+		        ...
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+		        <button type="button" class="btn btn-primary">Save changes</button>
+		      </div>
+		    </div>
+		  </div>
+		</div>
+		
+	</div>
+</body>
+</html>

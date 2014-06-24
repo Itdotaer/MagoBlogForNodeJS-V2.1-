@@ -1,0 +1,25 @@
+<div class="container" style="padding-top:60px">
+    <form method="post">
+        <div class="text-left" style="width:400px;">
+            <div class="input-group">
+                <p class="login-label text-primary">标题:</p>
+                <input name="title" type="text" class="form-control" placeholder="">
+            </div>
+            </br>
+            <div class="input-group">
+                <p class="login-label text-primary">标签:</p>
+                <input name="tags" type="text" class="form-control" placeholder="">
+            </div>
+            <p class="label label-danger" style="float:left;margin-top:20px;margin-bottom:20px;width: 200px;height: 40px;font-size: 20px">描述:</p>
+            <textarea name="description" rows="2" cols="153"></textarea><br />
+        </div>
+        <p class="label label-danger" style="float:left;margin-top:20px;margin-bottom:20px;width: 200px;height: 40px;font-size: 20px">博客内容:</p>
+        <div class="text-left" style="float: left">
+            <textarea name="post" rows="20" cols="160"></textarea><br />
+            <button class="btn btn-danger" type="submit">发表</button>
+            <button class="btn btn-danger" type="reset">清空</button>
+            <p class="text-success text-center login-info" style="height: 40px"><%= info%></p>
+        </div>
+
+    </form>
+</div>
