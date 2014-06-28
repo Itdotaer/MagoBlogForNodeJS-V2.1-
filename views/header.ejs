@@ -7,13 +7,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#"><%= title%></a>
+            <img class="navbar-brand" src="/img/Github-icon(64).png">
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">首页</a></li>
-                <li><a href="./blog">博客</a></li>
-                <li><a href="./archives">分类</a></li>
+                <li class="active"><a href="/">首页</a></li>
+                <li><a href="/blog">博客</a></li>
+                <li><a href="/archives">足迹</a></li>
+                <li><a href="/tags">标签</a> </li>
 
                 <%if(user){%>
                 <li class="dropdown">
@@ -32,8 +33,8 @@
             </ul>
             <%if(!user){%>
             <ul class="nav navbar-nav navbar-right" style="margin-top: 8px;margin-bottom: 8px;margin-right: 10px; float: left">
-                <a class="btn btn-primary navbar-right" href="/login"  role="button">登陆</a>
-                <a class="btn btn-primary navbar-right" href="/reg"  role="button">注册</a>
+                <a class="btn btn-primary" href="/login"  role="button">登陆</a>
+                <!--<a class="btn btn-primary" href="/reg"  role="button">注册</a>-->
             </ul>
             <%}else{%>
             <ul class="nav navbar-nav navbar-right" style="margin-top: 8px;margin-bottom: 8px;margin-right: 10px;">

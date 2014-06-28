@@ -1,0 +1,22 @@
+<div class="container" style="padding-top:60px">
+    <div class="page-header">
+        <h1><%= post.title%></h1>
+        <div style="padding-top:10px; padding-bottom: 10px; white-space:nowrap">
+            <a class="label label-primary" href="/user/<%= post.name%>">作者:<%= post.name%></a>
+            <p class="label label-primary">阅读:<%= post.pv%></p>
+            <p class="label label-primary">发布日期:<%= post.time.day%></p>
+            <%if((user == null ? '' : user.name) === post.name){%>
+            <div class="text-right">
+                <a class="btn btn-danger" type="button" href="/edit/<%= post._id%>">修改</a>
+                <a class="btn btn-danger" type="button" href="/remove/<%= post._id%>">删除</a>
+            </div>
+            <%}%>
+        </div>
+        <div class="alert alert-success"><%- post.des%></div>
+        <div class="alert" style="border-color: #b9def0">
+            <%- post.content%>
+        </div>
+        <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+        <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"32"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+    </div>
+</div>
