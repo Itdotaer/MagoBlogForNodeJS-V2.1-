@@ -6,11 +6,11 @@ This is a blog web system that implements with NodeJS + Ejs + MongoDB.
 
 ## Usage
 
-
+You can use the Blog to publish your own's blog. And share cool things with others.
 
 ## Developing
 
-
+Node.js environment
 
 ### Tools
 
