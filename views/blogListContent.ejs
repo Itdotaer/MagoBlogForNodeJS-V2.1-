@@ -1,5 +1,51 @@
-<div class="container" style="padding-top:60px">
-    <%posts.forEach(function (post, index) {%>
-    <p class="text-left text-warning r_head"><%=post.title %>|<%=post.time.day %>|<%=post.name%>|<%=post.pv%><img src="<%= post.head %>"></p>
-    <%})%>
+<div class="container article_list" style="padding-top:60px">
+    <div class="article_list_left">
+        <%posts.forEach(function (post, index) {%>
+        <div class="media unit">
+            <a class="pull-left" href="#">
+                <img class="media-object" src="<%= post.head%>" alt="">
+            </a>
+            <div class="media-body">
+                <h4><a href="/blog/<%= post._id%>"><%= post.title%></a> </h4>
+                <p><%- post.des%></p>
+            </div>
+            <a class="label label-default" href="/user/<%= post.name%>">作者:<%= post.name%></a>
+            <p class="label label-default">阅读:<%= post.pv%></p>
+            <p class="label label-default">发布日期:<%= post.time.day%></p>
+        </div>
+        <%})%>
+        <div class="text-center">
+            <ul class="pagination">
+                <%if(total_page > 0){%>
+                    <%if(page_num -1 <= 0){%>
+                    <li class="disabled"><a href="#">&laquo;</a></li>
+                    <%}else{%>
+                     <li><a href="?page_num=<%= page_num - 1%>">&laquo;</a></li>
+                    <%}%>
+                    <%for(var i = 1; i <= total_page; i++){%>
+                        <%if(page_num == i){%>
+                        <li class="active"><a href="?page_num=<%= i%>"><%= i%><span class="sr-only">(current)</span></a> </li>
+                        <%}else{%>
+                        <li><a href="?page_num=<%= i%>"><%= i%></a></li>
+                        <%}%>
+                    <%}%>
+                <%}%>
+                <%if(page_num + 1 > total_page){%>
+                <li class="disabled"><a href="#">&raquo;</a></li>
+                <%}else{%>
+                <li><a href="?page_num=<%= page_num + 1%>">&raquo;</a></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+    <div class="article_list_right">
+        <div class="report">
+            <h2 class="tit_2"><p>求关注</p></h2>
+            <iframe src="http://follow.v.t.qq.com/index.php?c=follow&a=quick&appkey=801518711&sign=8cfd9b16&v=2&name=hujiangtao1235&style=1&t=1403859541505&f=1" frameborder="0" scrolling="auto" width="300" height="75" marginwidth="0" marginheight="0" allowtransparency="true"></iframe>
+        </div>
+        <div class="report">
+            <h2 class="tit_2"><p>微博秀</p></h2>
+            <iframe frameborder="0" scrolling="no" src="http://show.v.t.qq.com/index.php?c=show&a=index&n=hujiangtao1235&w=302&h=552&fl=2&l=8&o=31&co=0" width="302" height="552"></iframe>
+        </div>
+    </div>
 </div>

@@ -3,23 +3,21 @@
         <div class="text-left" style="width:400px;">
             <div class="input-group">
                 <p class="login-label text-primary">标题:</p>
-                <input name="title" type="text" class="form-control" placeholder="">
+                <input name="title" type="text" class="form-control" disabled="disabled" value="<%= post.title%>">
             </div>
             </br>
             <div class="input-group">
                 <p class="login-label text-primary">标签:</p>
-                <input name="tags" type="text" class="form-control" placeholder="">
+                <input name="tags" type="text" class="form-control" disabled="disabled" value="<%= post.tags%>">
             </div>
             <p class="label label-danger" style="float:left;margin-top:20px;margin-bottom:20px;width: 200px;height: 40px;font-size: 20px">描述:</p>
-            <textarea name="description" rows="2" cols="160"></textarea><br />
+            <textarea name="description" rows="2" cols="153"><%= post.des%></textarea><br />
         </div>
         <p class="label label-danger" style="float:left;margin-top:20px;margin-bottom:20px;width: 200px;height: 40px;font-size: 20px">博客内容:</p>
         <div class="text-left" style="float: left">
-            <textarea name="content" rows="20" cols="160"></textarea><br />
-            <button class="btn btn-danger" type="submit">发表</button>
-            <button class="btn btn-danger" type="reset">清空</button>
+            <textarea name="content" rows="20" cols="160"><%= post.content%></textarea><br />
+            <button class="btn btn-danger" type="submit">确认修改</button>
             <p class="text-success text-center login-info" style="height: 40px"><%= info%></p>
         </div>
-
     </form>
 </div>

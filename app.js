@@ -1,9 +1,9 @@
-
 /**
  * Module dependencies.
  */
 
-var express = require('express');
+var express;
+express = require('express');
 var routes = require('./routes');
 var http = require('http');
 var path = require('path');
@@ -20,7 +20,7 @@ app.set('view engine', 'ejs');
 
 app.use(flash());
 
-app.use(express.favicon());
+app.use(express.favicon(__dirname + '/public/img/favicon.ico'));
 app.use(express.logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded());
@@ -33,7 +33,6 @@ app.use(express.session({
     cookie: {maxAge: 1000 * 60 * 60 * 24 * 30},//30 days
     url: settings.url
 }));
-app.use(app.router);
 
 // development only
 if ('development' === app.get('env')) {

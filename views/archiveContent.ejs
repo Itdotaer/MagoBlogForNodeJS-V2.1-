@@ -1,0 +1,22 @@
+<div class="container" style="padding-top: 60px">
+    <table class="table">
+        <thead>
+            <tr><th>日期</th><th>博文</th><th>阅读</th></tr>
+        </thead>
+        <tbody>
+            <% var LastYear = 0 %>
+            <%archives.forEach(function (archive, index) {%>
+
+            <% if (LastYear != archive.time.year) { %>
+            <tr class="active"><td colspan="3"><h4><%= archive.time.year %></h4></td></tr>
+            <% LastYear = archive.time.year } %>
+
+            <tr class="success">
+                <td><time><%= archive.time.day %></time></td>
+                <td><a href="/blog/<%=archive._id %>"><%= archive.title %></a></td>
+                <td><label class="label label-primary"><%= archive.pv%></label> </td>
+            </tr>
+            <%})%>
+        </tbody>
+    </table>
+</div>
